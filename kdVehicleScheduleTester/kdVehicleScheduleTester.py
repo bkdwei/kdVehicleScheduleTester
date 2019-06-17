@@ -175,6 +175,8 @@ class kdVehicleScheduleTester(Window):
                 self.cb_first_weight.setChecked(True)
             elif item == "weight2":
                 self.cb_second_weight.setChecked(True)
+            elif item == "slide":
+                self.cb_slide.setChecked(True)
             elif item == "brake1":
                 self.cb_first_brake.setChecked(True)
             elif item == "brake2":

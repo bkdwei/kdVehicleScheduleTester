@@ -96,6 +96,8 @@ where
                 bigItem = "light"
             elif item in ["weight1", "weight2"]:
                 bigItem = "weight"
+            elif item == "slide":
+                bigItem = "slide"
             elif item in ["brake1", "brake2"]:
                 bigItem = "brake"
                 
