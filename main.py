@@ -6,12 +6,11 @@ Created on 2019年5月9日
 @author: bkd
 '''
 from tkinter import messagebox
-import ttkthemes 
 
 if __name__ == '__main__':
-#     try:
-    from kdVehicleScheduleTester.kdVehicleScheduleTester import main
-    main()
-#     except Exception as e:
-#         print(e)
-#         messagebox.showerror("系统异常", str(e))
+    try:
+        from kdVehicleScheduleTester.kdVehicleScheduleTester import main
+        main()
+    except Exception as e:
+        print(e)
+        messagebox.showerror("系统异常", str(e))

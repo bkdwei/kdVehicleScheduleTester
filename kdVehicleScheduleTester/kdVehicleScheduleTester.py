@@ -28,20 +28,21 @@ class kdVehicleScheduleTester(Window):
     def _init_ui(self):
         self.setGeometry(500, 300)
         
-        self.vl_main = VerticalLayout("", self)
-        self.addWidget(self.vl_main)
+        self.setLayout(VERTICAL)
+#         self = VerticalLayout("", self)
+#         self.addWidget(self)
         
 #         数据库配置
-        self.hl_db = HorizontalLayout("数据库配置", self.vl_main)
-        self.vl_main.addWidget(self.hl_db)
+        self.hl_db = HorizontalLayout("数据库配置", self)
+        self.addWidget(self.hl_db)
         self.lb_db_addr = Label("数据库地址", self.hl_db)
         self.le_db_addr = LineEdit("localhost;3306;car2018;kde#2018;carCheck", self.hl_db)
         self.hl_db.addWidget(self.lb_db_addr)
         self.hl_db.addWidget(self.le_db_addr)
         
 #         按钮配置
-        self.hl_button = HorizontalLayout("", self.vl_main)
-        self.vl_main.addWidget(self.hl_button)
+        self.hl_button = HorizontalLayout("", self)
+        self.addWidget(self.hl_button)
         self.pb_add = PushButton("新增", self.hl_button)
         self.pb_del = PushButton("删除", self.hl_button)
         self.pb_edit = PushButton("更改", self.hl_button)
@@ -54,8 +55,8 @@ class kdVehicleScheduleTester(Window):
         self.hl_button.addWidget(self.pb_connect_db)
         
 #         车辆列表和检测项目
-        self.hl_content = HorizontalLayout("", self.vl_main)
-        self.vl_main.addWidget(self.hl_content)
+        self.hl_content = HorizontalLayout("", self)
+        self.addWidget(self.hl_content, expand=YES)
         self.lw_cars = ListWidget(self.hl_content)
         self.hl_content.addWidget(self.lw_cars)
 #         self.lw_cars.addItem("粤BKD034")
