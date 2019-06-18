@@ -37,6 +37,7 @@ class kdVehicleScheduleTester(Window):
         self.addWidget(self.hl_db)
         self.lb_db_addr = Label("数据库地址", self.hl_db)
         self.le_db_addr = LineEdit("localhost;3306;car2018;kde#2018;carCheck", self.hl_db)
+        self.le_db_addr.setHideInput("*")
         self.hl_db.addWidget(self.lb_db_addr)
         self.hl_db.addWidget(self.le_db_addr)
         
